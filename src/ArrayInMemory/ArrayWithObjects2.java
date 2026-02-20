@@ -11,4 +11,10 @@ public class ArrayWithObjects2 {
         System.out.println("second object");
     }
 
+    public static void main(String[] args) {
+        ArrayWithObjects2 a=new ArrayWithObjects2();
+        System.out.println(a.b);
+        // this will print the value it has in this class
+    }
+
 }
