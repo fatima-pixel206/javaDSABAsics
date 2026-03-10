@@ -24,24 +24,36 @@ public class MoveElementForward {
             System.out.print(ele+" ");
         }
         System.out.println();
-        if(ps < last+1 && ps >= 0 ) {
-            System.out.println(" Invalid position");
-        }
-        else {
-            if (last + 1 < a.length) {
+        insert(a,val,ps,last);
+        //        if(ps < last+1 && ps >= 0 ) {
+//            System.out.println(" Invalid position");
+//        }
+//        else {
+//            if (last + 1 < a.length) {
+//
+//                for (int i = last; i >= ps; i--) {
+//                    a[i + 1] = a[i];
+//                }
+//                a[ps] = val;
+//                last++;
+//            } else {
+//                System.out.println("Invalid Input");
+//            }
+//        }
+//        for (int ele: a){
+//            System.out.print(ele+" ");
+//        }
 
-                for (int i = last; i >= ps; i--) {
-                    a[i + 1] = a[i];
-                }
-                a[ps] = val;
-                last++;
-            } else {
-                System.out.println("Invalid Input");
-            }
-        }
-        for (int ele: a){
-            System.out.print(ele+" ");
+    }
+
+ static    void insert(int[]a, int num, int ps,int last) {
+        if (ps <= a.length - 1 || ps >= 0) {
+            a[last + 1] = a[ps];
+            a[ps] = num;
         }
 
+        for (int e : a) {
+            System.out.print(e+" ");
+        }
     }
 }
