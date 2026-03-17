@@ -1,6 +1,6 @@
 package Chapter2;
 
-public class Palindrom {
+public class Palindrome {
     public static int palindrome(int x) {
         if (x < -1) {
             return x;

@@ -7,7 +7,7 @@ public class ArrayWithObjects2 {
     int d=89;
     int e=90;
     int f=89;
-    void print(){
+   public void print(){
         System.out.println("second object");
     }
 

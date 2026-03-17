@@ -1,0 +1,82 @@
+table{
+    border-collapse: collapse;
+}
+.parent{
+    background-color: steelblue;
+}
+*{
+    color: white;
+}
+
+td.element{
+    width: 100px;
+    height: 100px;
+    border: solid black;
+    text-align: center;
+    vertical-align: top;
+    font-family: Arial, sans-serif;
+    position: relative;
+
+
+}
+
+.parent>td:nth-child(13){
+    background-color: gray;
+}
+.parent>td:nth-child(14){
+    background-color: gray;
+}
+.parent>td:nth-child(15){
+    background-color: gray;
+
+}
+
+.parent>td:nth-child(1){
+    background-color: goldenrod;
+}
+.parent>td:nth-child(16){
+    background-color: lightgray;
+}
+.parent>td :nth-child(16){
+    background-color: fuchsia;
+}
+.parent>td:nth-child(18){
+    background-color: blueviolet;
+}
+.parent>td:nth-child(2){
+    background-color: darkorange;
+}
+.atomic-number{
+    font-size: 12px;
+    position: absolute;
+    top: 2px;
+    left: 4px;
+}
+.symbol{
+
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.mass-number{
+    font-size: 12px;
+    position: absolute;
+    bottom: 2px;
+    right:4px ;
+}
+.name{
+    font-size: 12px;
+
+}
+.paar>td{
+    background-color:orangered ;
+
+
+}
+.row{
+    background-color: greenyellow;
+}
+.empty{
+    background: transparent;
+    border: none;
+}

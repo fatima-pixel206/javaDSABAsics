@@ -1,4 +1,4 @@
-package SpaceAndTimeComlexity;
+package SpaceAndTimeComlexity.TimeComplexity;
 /*
 array length is n and
 elements are n-1

@@ -1,4 +1,4 @@
-package SpaceAndTimeComlexity;
+package SpaceAndTimeComlexity.TimeComplexity;
 
 public class Sort012 {
 

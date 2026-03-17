@@ -2,6 +2,8 @@ package BasicOfDSA;
 import java.util.Scanner;
 
 public class CalculateCGPA {
+    public static Scanner sc;
+
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println(" Here we calculate CGPA of a year (2 semesters )");

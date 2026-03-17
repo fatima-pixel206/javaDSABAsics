@@ -1,4 +1,10 @@
 package Chapter2;
 
-public class BoardPattren {
+public class BoardPattern {
+    public static void main(String[] args) {
+        for (int i = 1; i <=4 ; i++) {
+           System.out.println("* * * * * * * * ");
+            System.out.println(" * * * * * * * * ");
+        }
+    }
 }

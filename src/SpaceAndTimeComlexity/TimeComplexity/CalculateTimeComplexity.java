@@ -1,4 +1,4 @@
-package SpaceAndTimeComlexity;
+package SpaceAndTimeComlexity.TimeComplexity;
 /*
 Dated 13,March 2026
 calculating time complexity
