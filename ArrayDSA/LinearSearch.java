@@ -1,4 +1,6 @@
-package ArrayDSA;
+package If_Else.ArrayDSA;
+
+import If_Else.ArrayDSA.MaximumOfArrayElements;
 
 import java.util.Scanner;
 

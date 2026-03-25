@@ -1,4 +1,4 @@
-package ArrayInMemory;
+package If_Else.ArrayInMemory;
 
 public class ArrayWithObjects {
     int a=89;

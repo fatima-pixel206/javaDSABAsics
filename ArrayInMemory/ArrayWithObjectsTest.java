@@ -1,21 +1,23 @@
-package ArrayInMemory;
+package If_Else.ArrayInMemory;
 
 public class ArrayWithObjectsTest {
+    public static ArrayInMemory.ArrayWithObjects2 a;
+
     public static void main(String[] args) {
         ArrayWithObjects a = new ArrayWithObjects();
-        ArrayWithObjects2 b = new ArrayWithObjects2();
+        ArrayInMemory.ArrayWithObjects2 b = new ArrayInMemory.ArrayWithObjects2();
         ArrayWithObjects[] arr = new ArrayWithObjects[3];
-        arr[0]=a;
-
-System.out.println(b);
+        System.out.println(b);
         System.out.println(b.f);
         b.f=900;
         arr[0]=a;
-      //  arr[1]=b;
-    System.out.println(arr[0]);
+        //  arr[1]=b;
+        arr[0].d=9000;
+        arr[0].print();
+        System.out.println(arr[0]);
 // so here in index [0] has not the value of (a) but, it has the reference or address
         //
-        ArrayWithObjects2 []ar={b,};
+        ArrayInMemory.ArrayWithObjects2[]ar={b,};
         //ar[0]=b;
         // arr[1]=a;
         // this will exception
@@ -47,7 +49,7 @@ System.out.println(b);
         // here you can see with using of object b the value in array is also changing
 
         // and updating array index is updating is also changing in object filed
-        ar[0].print();
+        ar[0].print();//??????
+
     }
 }
-
