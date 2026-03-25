@@ -25,6 +25,6 @@ public class ThreeSumOfArray {
 }
 
     static void main() {
-        threeSum(new int[]{-1,0,1,2,-1,-4},3);
+        threeSum(new int[]{-12,0,19,2,-1,-4},3);
     }
 }

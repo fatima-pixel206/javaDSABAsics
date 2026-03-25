@@ -1,4 +1,4 @@
-package SpaceAndTimeComlexity.TimeComplexity;
+package If_Else.SpaceAndTimeComlexity.TimeComplexity;
 
 public class FactorialOfN {
     public static int factorial(int n){
@@ -70,6 +70,19 @@ time comp is O(n)
         /*
         here the number of ops are n(n-1)/2
         time complexity is O(n*n)=O(n)
+         */
+    }
+    public static void logCh(int n){
+        for (int i = 1; i <=n ; i*=2) {
+            System.out.println("hi");
+        }
+        /*
+
+        Here the no of Op are 1+2+3+4....x
+        1+2+4+8+16+32+ n/2 ,n
+        so the time comp is
+        O(log2n+1) O(log n)
+
          */
     }
     static void main() {
