@@ -85,8 +85,11 @@ time comp is O(n)
 
          */
     }
+
     static void main() {
         int n=6;
         System.out.println(factorial(n));
     }
 }
+
+
