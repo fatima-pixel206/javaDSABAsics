@@ -1,4 +1,4 @@
-package ArrayInMemory;
+package If_Else.ArrayInMemory;
 
 public class Hetro {
 
@@ -24,6 +24,28 @@ public class Hetro {
         }
         else{
             System.out.println(arrayObj[0]==arrayObj[1]);
+        }
+    }
+    static class Student {
+        String name;
+        int age;
+
+        void display() {
+            System.out.println(name);
+        }
+
+        class Ar {
+
+            static void main() {
+
+
+                Student[] students = new Student[3];
+
+                students[0] = new Student();
+
+                students[0].name = "Ali";
+                students[0].age = 20;
+            }
         }
     }
 }
