@@ -7,7 +7,6 @@ This repository contains basic Java codes to understand the fundamental concepts
 * Time Complexity Analysis
 
 ### 📊 Visualizing Memory:
-[Yahan apni picture drag karke drop karen]
 ![array-data-structure](https://github.com/user-attachments/assets/b1a2e9e8-b316-4f10-a036-eb038a2dcbc3)
 ![Stack Data Structure](https://github.com/user-attachments/assets/653972ca-f7e5-44b1-8e58-65f140fe9ff0)
 ![2da](https://github.com/user-attachments/assets/3f3621e3-351c-4027-a62c-57fc37a97363)
