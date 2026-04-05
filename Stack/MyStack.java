@@ -15,5 +15,7 @@ class MyStack {
         int data = arr[top];
         top--;
         return data;
+        
+        
     }
 }
