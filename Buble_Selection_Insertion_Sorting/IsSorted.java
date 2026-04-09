@@ -23,7 +23,7 @@ public class IsSorted {
     }
     static void main() {
         IsSorted is = new IsSorted();
-        System.out.println(is.isSorted(new int[]{1,2,3,1,2,3,4,5,6,8}));
+        System.out.println(is.isSorted(new int[]{5}));
         System.out.println(is.isSorted(new int []{-11,1,1,4,6,7,8,9,}));
 
     }
