@@ -1,0 +1,12 @@
+.body{
+    background-color: chartreuse;
+    backdrop-filter: blur(any);
+    -webkit-column-break-after: inherit;
+}
+.h1{
+    font-family: "JetBrains Mono Light";
+    background-color: chocolate;
+}
+.img{
+    --block-font-size: unset;
+}
