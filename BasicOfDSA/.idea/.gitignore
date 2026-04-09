@@ -9,3 +9,8 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 OOP
+idea /
+*.xml
+idea /
+*.class
+idea /
