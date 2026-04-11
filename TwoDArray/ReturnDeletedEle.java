@@ -46,7 +46,7 @@ package If_Else.TwoDArray;
             };
 
             OperationsOnTwoDArray.read(ar);
-            If_Else.TwoDArray.ReturnAfterDeletedEle dp = new If_Else.TwoDArray.ReturnAfterDeletedEle();
+            If_Else.TwoDArray.ReturnDeletedEle dp = new If_Else.TwoDArray.ReturnDeletedEle();
             //System.out.println( dp.noOfOCC(ar,2));
             System.out.println();
             dp.deleted(ar,2);
