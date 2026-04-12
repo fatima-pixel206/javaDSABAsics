@@ -1,4 +1,4 @@
-package SpaceAndTimeComlexity.TimeComplexity;
+package If_Else.SpaceAndTimeComlexity.TimeComplexity;
 /*
 array length is n and
 elements are n-1
@@ -58,10 +58,10 @@ public class FindSameElement {
 
 
     public static void main(String[] args) {
-        int[] ar={10,9,8,7,6,7,3,2,1,5,4};
-       findELe(ar);
-        duplicate(ar);
-        sameEle(ar);
+        int[] ar={10,9,8,7,6,7,3,2,1,5,4,9};
+      findELe(ar);
+     //   duplicate(ar);
+      //  sameEle(ar);
     }
 }
 
