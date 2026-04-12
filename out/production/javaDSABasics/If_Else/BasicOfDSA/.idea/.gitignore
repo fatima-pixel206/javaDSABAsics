@@ -13,4 +13,7 @@ idea /
 *.xml
 idea /
 *.class
-idea /
+idea
+
+*.class
+
