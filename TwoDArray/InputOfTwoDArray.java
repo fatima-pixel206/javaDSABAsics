@@ -1,4 +1,4 @@
-package If_Else.Ternary_Oprator;
+package If_Else.TwoDArray;
 
 import java.util.Scanner;
 
