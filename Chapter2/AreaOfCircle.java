@@ -1,4 +1,4 @@
-package Chapter2;
+package If_Else.Chapter2;
 
 import java.util.Scanner;
 

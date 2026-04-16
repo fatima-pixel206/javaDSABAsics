@@ -11,7 +11,7 @@ public class StackOfArray {
     char  [] arr ;
 //
     public int getSize() {
-        return size;
+        return top+1;
     }
 
     public void setSize(int size) {
@@ -56,9 +56,16 @@ public class StackOfArray {
   top--;
     }
     // peak
-    public char peak(){
-        return arr[top];
+    public char peak() {
+        if (!isEmpty()) {
+            return arr[top];
+        }
+        else{
+            System.out.println(" stack is empty");
+        }
+        return '0';
     }
+
     /// main
 
     static void main(String[] args) {
@@ -81,6 +88,7 @@ public class StackOfArray {
             result=result+st.peak();
             st.pop();
         }
+        st.peak();
         System.out.println(result);
     }
 }
