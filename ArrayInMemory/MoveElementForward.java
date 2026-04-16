@@ -1,4 +1,4 @@
-package ArrayInMemory;
+package If_Else.ArrayInMemory;
 
 import java.util.Scanner;
 

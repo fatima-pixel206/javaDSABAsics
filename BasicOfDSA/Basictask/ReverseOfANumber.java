@@ -19,10 +19,15 @@ public class ReverseOfANumber {
 int reverse=0;
         System.out.println("Initial "+n);
 
-        while(n>0){
-            int lastD=n%10;
+//        while(n>0){
+//            int lastD=n%10;
+//            reverse =reverse*10+lastD;
+//            n=n/10;
+//        }
+        // with for
+        for (int i = n; i >0 ; i=i/10) {
+            int lastD=i%10;
             reverse =reverse*10+lastD;
-            n=n/10;
         }
 if(isNegative){
             reverse=-reverse;
