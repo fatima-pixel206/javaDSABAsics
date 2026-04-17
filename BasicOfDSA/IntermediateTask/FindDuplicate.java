@@ -1,4 +1,4 @@
-package If_Else.TwoDArray;
+package If_Else.BasicOfDSA.IntermediateTask;
 
 public class FindDuplicate {
     public void findDuplicate(int[] ar) {

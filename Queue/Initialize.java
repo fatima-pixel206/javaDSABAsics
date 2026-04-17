@@ -87,6 +87,7 @@ public class Initialize {
         q.push(5809);
         q.push(389);
         q.push(956);
+
         q.push(900);
         System.out.println(q.currents);//7
         System.out.println(q.first());// 891
