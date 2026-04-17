@@ -72,7 +72,7 @@ public class Initialize {
     }
     // access first element
     public int first(){
-        if(currents==0) {
+        if(0 == currents) {
 
             System.out.println(" queue is null");
             return -1;
