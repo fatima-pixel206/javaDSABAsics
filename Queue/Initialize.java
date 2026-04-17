@@ -20,7 +20,7 @@ public class Initialize {
     }
     // check is empty or not
     public boolean isEmpty(){
-        if(start==-1){
+        if(currents==0){
             return true;
         }
         else
@@ -39,16 +39,17 @@ public class Initialize {
             System.out.println(" queue is full");
             return;
         }
-        else if(start==-1){
-            this.start++;
+        else if(currents==0){
+            this.start=0;
+            this.end=0;
             queue[start]=n;
             this.currents++;
         }
         else{
 
-           this.end= currents;
-            if(end>0)
+           this.end=(end+1)%size;
             queue[end]=n;
+
             this.currents++;
         }
     }
@@ -56,9 +57,16 @@ public class Initialize {
             public void pop(){
         if(currents==0 ){
             System.out.println(" queue is null");
+
+            return;
         }
-        else{
-           start++;
+        else if(currents==1){
+            end=-1;
+            start=-1;
+            currents--;
+        }
+        else if(currents>0){
+           start=(start+1)%size;
            this.currents--;
         }
     }
