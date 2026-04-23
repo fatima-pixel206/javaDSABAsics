@@ -29,7 +29,7 @@ public class NodeOfLinkedList {
     }
 
 }
-class Node{
+ class Node{
     int value;
     Node next;// next node reference
 }
