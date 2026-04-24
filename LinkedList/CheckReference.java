@@ -2,13 +2,13 @@ package If_Else.LinkedList;
 
 public class CheckReference {
     static void main() {
-        Node a = new Node();
-        Node b = new Node();
-        Node c = new Node();
-        Node d = new Node();
-        Node f = new Node();
-        Node g = new Node();
-        Node h = new Node();
+        Node a = new Node(1);
+        Node b = new Node(3);
+        Node c = new Node(21);
+        Node d = new Node(13);
+        Node f = new Node(3);
+        Node g = new Node(5);
+        Node h = new Node(24);
         c.value = 90;
         System.out.println(a);
         System.out.println(b);

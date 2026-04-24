@@ -4,7 +4,7 @@ public class PrintReverseArrayUsingRec {
     public static void rec(int[] a,int i)
     {
         if(i == a.length-1) return;
-i++;
+      i++;
         rec(a,i);
 
         System.out.print(a[i]+" ");
