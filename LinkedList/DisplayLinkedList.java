@@ -57,4 +57,14 @@ public class DisplayLinkedList {
         // it means next of head and continue until null
     }
 
+    // search in
+    protected int search(Nod head, int val) {
+        while (head != null) {
+            if (head.val == val)
+                return head.val;
+
+
+        }
+        return -1;
+    }
 }
