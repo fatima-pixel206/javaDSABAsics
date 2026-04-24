@@ -2,6 +2,7 @@ package If_Else.LinkedList;
 
 import java.util.Scanner;
 
+
 class Nod{
     int val;
      Nod next ;
@@ -13,23 +14,42 @@ class Nod{
 
 public class DisplayLinkedList {
     static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        Nod x = new Nod(sc.nextInt());
+     //   Scanner sc = new Scanner(System.in);
+        Nod x = new Nod(67);
         Nod y = new Nod(3);
         Nod z = new Nod(90);
-        Nod xx = new Nod(sc.nextInt());
+        Nod xx = new Nod(67);
 
 
-        x.next=y;
-        y.next=z;
-        z.next=xx;
+        x.next = y;
+        y.next = z;
+        z.next = xx;
 
-        DisplayLinkedList disv = new DisplayLinkedList();
-        disv.Display(x);
+        DisplayLinkedList dis= new DisplayLinkedList();
+        // disv.Display(x);
+        //dis.displayRec(x);
+       // Nod n= null;
+        dis.reverseDisplay(x);
+//
+
+    }
+
+    // display rec
+    public void displayRec(Nod head) {
+    if(head==null) return;
+            IO.print(head.val+" ,");
+        displayRec(head.next);
 
 
     }
-    public void Display(Nod head){
+    // reverse
+    public void reverseDisplay(Nod head){
+        if(head== null) return;
+        reverseDisplay(head.next);// it goes to last node and then start printing from last
+
+        System.out.print(head.val+",");
+    }
+    protected void Display(Nod head){
         for (Nod temp = head; temp != null ; temp=temp.next) {
             System.out.print(temp.val+" ");
         }
