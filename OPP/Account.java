@@ -9,10 +9,11 @@ public class Account {
             private double cash;
 
 
-    public void setName(String name) {
+    public Account setName(String name) {
 
         this.name = name;
         //name= "hi";
+        return this;
     }
     public String getName() {
        // System.out.println(name.hashCode());
