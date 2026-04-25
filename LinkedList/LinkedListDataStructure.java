@@ -89,5 +89,13 @@ public class LinkedListDataStructure {
         ll.displayList();
         ll.addAtHead(79);
         ll.displayList();
+        System.out.println(" size "+ll.size);
+        ll.deleteAtHeead();
+
+        ll.displayList();
+        System.out.println(" size "+ll.size);
+        ll.addAtHead(808);
+        ll.displayList();
+        System.out.println(" size "+ll.size);
     }
 }
