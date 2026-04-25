@@ -72,8 +72,9 @@ package If_Else.LinkedList;
                     return;
                 }
                 else {
-
+                    this.tail=null;
                 }
+                size--;
             }
 
         }
@@ -106,6 +107,14 @@ public class LinkedListDataStructure {
         ll.displayList();
         System.out.println(" size "+ll.size);
         ll.addAtHead(808);
+        ll.displayList();
+        System.out.println(" size "+ll.size);
+        // time complexity of insertion and deletion is O(1)
+        // A S  is O(1)
+        ll.deleteAtTail();
+        ll.displayList();
+        System.out.println(" size "+ll.size);
+        ll.deleteAtHeead();
         ll.displayList();
         System.out.println(" size "+ll.size);
     }
