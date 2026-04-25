@@ -12,7 +12,7 @@ package If_Else.LinkedList;
         class Linkedlist {
             NodeC head; // default null
             NodeC tail;// default null
-            int size=0;
+            int size;
             // we are making head and tail because we can add from front and back
 //           public Linkedlist(){
 //               head= tail= null;
@@ -50,21 +50,31 @@ package If_Else.LinkedList;
 
             void displayList(){
                 if(head==null) return;
-                for (NodeC temp=this.head; temp != null;    temp=temp.next) {
+                for (NodeC temp=this.head; temp != null; temp=temp.next) {
                     System.out.print(temp.value+",");
                 }
+                System.out.println();
             }
 
             void deleteAtHeead(){
                 if(head== null) {
+                    System.out.println(" empty linked list Eroooor");
+                    return;
+                }
+
+                    head=head.next;
+                if(head== null)
+                    tail=null;
+                size--;
+            }
+            void deleteAtTail(){
+                if(head== null){
                     return;
                 }
                 else {
-                    head=head.next;
-                }
-                size--;
-            }
 
+                }
+            }
 
         }
 public class LinkedListDataStructure {
@@ -73,6 +83,7 @@ public class LinkedListDataStructure {
 
         Linkedlist ll = new Linkedlist();
         ll.displayList();
+        //ll.deleteAtHeead();
         ll.addAtTail(30);// now this is head
         System.out.println(ll.head.value);
         System.out.println(ll.tail.value);
