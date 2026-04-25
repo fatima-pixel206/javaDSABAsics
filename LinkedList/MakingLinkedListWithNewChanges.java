@@ -101,6 +101,19 @@ class MyNode{
                     size--;
 
             }
+             int search(int age){
+                MyNode tem = head;
+                int i=0;
+                while(tem != null){
+                    if(tem.getAge()==age){
+                        return i;
+                    }
+                    i++;
+                    tem=tem.next;
+                }
+                return -1;
+             }
+
         }
 public class MakingLinkedListWithNewChanges {
     static void main() {
@@ -127,7 +140,7 @@ public class MakingLinkedListWithNewChanges {
        my.deleteFromHead();
         my.displayLink();
         System.out.println(my.getSize());
-
+        System.out.println(my.getTail().getAge()+" is on index "+ my.search(9));
     }
 
 }

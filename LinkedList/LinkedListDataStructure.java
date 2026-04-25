@@ -67,6 +67,16 @@ package If_Else.LinkedList;
                     tail=null;
                 size--;
             }
+            boolean search(int val){
+                NodeC my = head;
+                boolean find=false;
+                while(my!= null){
+                    if(my.value== val)
+                        find = true;
+                        return find;
+                }
+                return find;
+            }
             void deleteAtTail(){
                 if(head== null){
                     return;
