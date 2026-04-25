@@ -1,5 +1,5 @@
 package If_Else.LinkedList;
-
+//O(n)
 public class GetParticularValue {
     static void main() {
 
@@ -16,21 +16,24 @@ public class GetParticularValue {
         d.next=f;
         f.next=g;
         GetParticularValue get = new  GetParticularValue();
-        System.out.println(get.getParti(head,13));
+        System.out.println(get.getParti(head,4));
         // we are suppousing list is start from 0 index
     }
     public int getParti(Node head, int index ){
         int i=0;
-        for (Node temp = head; temp!= null ; temp=temp.next) {
-            if(i==index)
-            {
-                return temp.value;
-            }
-
+//        for (Node temp = head; temp!= null ; temp=temp.next) {
+//            if(i==index)
+//            {
+//                return temp.value;
+//            }
+//
+//            i++;
+//        }
+        for (Node temp= head; i<=index ; temp=temp.next) {
             i++;
         }
 
-        return -1;
+        return head.value;
     }
 
 }
