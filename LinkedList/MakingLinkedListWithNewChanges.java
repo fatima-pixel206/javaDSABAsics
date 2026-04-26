@@ -113,6 +113,23 @@ class MyNode{
                 }
                 return -1;
              }
+             void insertOnInd(int indx,int value,String lil){
+                MyNode lop = head;
+                int i=0;
+                while ( i   == indx-1){
+                    if( i==indx-1  )
+                    {
+                        MyNode insert = new MyNode(value,lil);
+
+                     insert.next=lop;
+                        lop.next=insert;
+                        return;
+                    }
+                                lop=lop.next;
+                    i++;
+                }
+                size++;
+             }
 
         }
 public class MakingLinkedListWithNewChanges {
@@ -131,16 +148,19 @@ public class MakingLinkedListWithNewChanges {
         my.addFromTail(30,"Alishba");
         my.addFromTail(43,"Aleef");
         my.addFromTail(13,"Aleem");
+      //  my.displayLink();
+//        my.addFromHead(10,"shan");
+//        my.displayLink();
+//        my.addFromTail(9,"hi");
+//        my.addFromHead(1,"gem");
+//        System.out.println(my.getSize());
+       //my.deleteFromHead();
         my.displayLink();
-        my.addFromHead(10,"shan");
-        my.displayLink();
-        my.addFromTail(9,"hi");
-        my.addFromHead(1,"gem");
         System.out.println(my.getSize());
-       my.deleteFromHead();
+       // System.out.println(" is on index "+ my.search(9));
+        my.insertOnInd(3,456,"Lamama");
         my.displayLink();
         System.out.println(my.getSize());
-        System.out.println(my.getTail().getAge()+" is on index "+ my.search(9));
     }
 
 }

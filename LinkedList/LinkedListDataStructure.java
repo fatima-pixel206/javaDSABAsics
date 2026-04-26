@@ -78,13 +78,29 @@ package If_Else.LinkedList;
                 return find;
             }
             void deleteAtTail(){
-                if(head== null){
+                if(head==null){
                     return;
                 }
-                else {
-                    this.tail=null;
+                if(tail== head){
+                    tail=null;
+                    head=null;
+            size--;
+            return;
+
                 }
-                size--;
+                else {
+                    for (NodeC temp = head; temp != null ;temp=temp.next) {
+                        if(temp.next==tail){
+                           tail=temp;
+                           tail.next=null;
+
+                           break;
+                        }
+
+                    }
+                    size--;
+                }
+
             }
 
         }
@@ -94,38 +110,45 @@ public class LinkedListDataStructure {
 
         Linkedlist ll = new Linkedlist();
         ll.displayList();
-        //ll.deleteAtHeead();
-        ll.addAtTail(30);// now this is head
-        System.out.println(ll.head.value);
-        System.out.println(ll.tail.value);
-        ll.addAtTail(300);// this is tail
-        System.out.println(ll.tail.value);
-        ll.addAtTail(30);
-        ll.addAtTail(40);
-        ll.addAtTail(360);
-        ll.addAtTail(3009);
-        ll.displayList();
-        System.out.println(" size "+ll.size);
-        ll.addAtHead(5000);
-        System.out.println(ll.head.value);
-        ll.displayList();
-        ll.addAtHead(79);
-        ll.displayList();
-        System.out.println(" size "+ll.size);
-        ll.deleteAtHeead();
+        ll.deleteAtTail();
+//        //ll.deleteAtHeead();
+       ll.addAtTail(30);// now this is head
 
         ll.displayList();
-        System.out.println(" size "+ll.size);
-        ll.addAtHead(808);
+       ll.deleteAtTail();
         ll.displayList();
-        System.out.println(" size "+ll.size);
-        // time complexity of insertion and deletion is O(1)
-        // A S  is O(1)
-        ll.deleteAtTail();
-        ll.displayList();
-        System.out.println(" size "+ll.size);
-        ll.deleteAtHeead();
-        ll.displayList();
+//        System.out.println(ll.head.value);
+//        System.out.println(ll.tail.value);
+//        ll.addAtTail(300);// this is tail
+//        System.out.println(ll.tail.value);
+//        ll.addAtTail(30);
+//        ll.addAtTail(40);
+//        ll.addAtTail(360);
+//        ll.addAtTail(3009);
+//        ll.displayList();
+//
+//        ll.addAtHead(5000);
+//        System.out.println(ll.head.value);
+//        ll.displayList();
+//        ll.addAtHead(79);
+//        ll.displayList();
+//
+//        ll.deleteAtHeead();
+//
+//        ll.displayList();
+//        System.out.println(" size "+ll.size);
+//        ll.addAtHead(808);
+//        ll.displayList();
+//        System.out.println(" size "+ll.size);
+//        // time complexity of insertion and deletion is O(1)
+//        // A S  is O(1)
+//
+//
+//        ll.deleteAtHeead();
+//        ll.displayList();
+//
+//        ll.deleteAtTail();
+//        ll.displayList();
         System.out.println(" size "+ll.size);
     }
 }
