@@ -50,7 +50,7 @@ class MyNode{
 //            }
 
             public int getSize() {
-                return size;
+                return this.size;
             }
 
             // add from head
@@ -113,54 +113,73 @@ class MyNode{
                 }
                 return -1;
              }
-             void insertOnInd(int indx,int value,String lil){
-                MyNode lop = head;
-                int i=0;
-                while ( i   == indx-1){
-                    if( i==indx-1  )
-                    {
-                        MyNode insert = new MyNode(value,lil);
-
-                     insert.next=lop;
-                        lop.next=insert;
-                        return;
-                    }
-                                lop=lop.next;
-                    i++;
+             void insertOnInd(int indx,int value,String lil) {
+                if(indx < 0 || indx > size) {
+                    System.out.println(" check size............");
+                    return;
                 }
-                size++;
-             }
 
+
+                 if (indx == 0) {
+                     addFromHead(value,lil);
+return;
+                 }
+                 if(indx==size){
+                     addFromTail(value,lil);
+                     return;
+                 }
+//                 if (head == null) {
+//                     addFromHead(value, lil);
+//                     return;
+//                 }
+                 else {
+
+                         MyNode temp=head;
+                     for (int j = 0; j < indx-1 ; j++) {
+                         temp=temp.next;
+                     }
+
+                     MyNode insert = new MyNode(value,lil);
+                     insert.next= temp.next;
+                     temp.next =insert;
+                     size++;
+                 }
+
+             }
         }
 public class MakingLinkedListWithNewChanges {
     static void main() {
         MyLinkedList my = new MyLinkedList();
-        System.out.println( my.getHead());
+       // System.out.println( my.getHead());
+        System.out.println(my.getSize());
+        my.insertOnInd(0,8,"ff");
         my.addFromTail(3,"Al");
         my.addFromHead(2," fatima");
-
+        my.insertOnInd(1,8,"ffali");
+        my.displayLink();
+        System.out.println(my.getSize());
 //        System.out.println(my.getSize());
 //        System.out.println(my.getTail());
 //        System.out.println( my.getHead());
-        my.addFromTail(3,"Alina");
-        my.addFromTail(6,"Aliya");
-
-        my.addFromTail(30,"Alishba");
-        my.addFromTail(43,"Aleef");
-        my.addFromTail(13,"Aleem");
-      //  my.displayLink();
-//        my.addFromHead(10,"shan");
+//        my.addFromTail(3,"Alina");
+//        my.addFromTail(6,"Aliya");
+//
+//        my.addFromTail(30,"Alishba");
+//        my.addFromTail(43,"Aleef");
+//        my.addFromTail(13,"Aleem");
+//      //  my.displayLink();
+////        my.addFromHead(10,"shan");
+////        my.displayLink();
+////        my.addFromTail(9,"hi");
+////        my.addFromHead(1,"gem");
+////        System.out.println(my.getSize());
+//       //my.deleteFromHead();
 //        my.displayLink();
-//        my.addFromTail(9,"hi");
-//        my.addFromHead(1,"gem");
 //        System.out.println(my.getSize());
-       //my.deleteFromHead();
-        my.displayLink();
-        System.out.println(my.getSize());
-       // System.out.println(" is on index "+ my.search(9));
-        my.insertOnInd(3,456,"Lamama");
-        my.displayLink();
-        System.out.println(my.getSize());
+//       // System.out.println(" is on index "+ my.search(9));
+//        my.insertOnInd(6,456,"Lamama");
+//        my.displayLink();
+//        System.out.println(my.getSize());
     }
 
 }
