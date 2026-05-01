@@ -74,10 +74,20 @@ public class ImplementationWithArray {
              front = (front+1)%cap;
              // = queue[front];
 
-             // move front circulerly
+             // move front circularly
          }
         size--;
          return save;
     }
-
+        // PEAK
+    int peak(){
+        if(isEmpty())return -1;
+        return queue[front];
+    }
+    // clear
+    void clear(){
+        if(isEmpty()){
+            System.out.println(" already empty");
+        }
+    }
 }

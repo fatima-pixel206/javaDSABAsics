@@ -6,6 +6,7 @@ public class DriverClass {
         driver.enqueue(4);
         driver.enqueue(5);
         driver.enqueue(15);
+        System.out.println(driver.peak());
         System.out.println(driver.dequeu());
         System.out.println(driver.dequeu());
         System.out.println(driver.dequeu());
