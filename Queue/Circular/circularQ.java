@@ -1,4 +1,4 @@
-package If_Else.Queue;
+package If_Else.Queue.Circular;
 
 public class circularQ {
     int cap = 8;

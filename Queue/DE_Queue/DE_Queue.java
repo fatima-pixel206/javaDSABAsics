@@ -1,4 +1,4 @@
-package If_Else.Queue;
+package If_Else.Queue.DE_Queue;
 
 public class DE_Queue {
     int cap =8;

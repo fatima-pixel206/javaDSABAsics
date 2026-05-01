@@ -1,4 +1,7 @@
-package If_Else.Queue;
+package If_Else.Queue.Circular;
+
+import If_Else.Queue.Initialize;
+
 // size -1
 public class TestCircularQueue {
     static void main() {
