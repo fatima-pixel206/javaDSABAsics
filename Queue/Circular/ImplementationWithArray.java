@@ -87,7 +87,21 @@ public class ImplementationWithArray {
     // clear
     void clear(){
         if(isEmpty()){
-            System.out.println(" already empty");
+            System.out.println(" already empty" );
+            return;
+        }
+        rear =-1;
+        front =-1;
+        size =0;
+    }
+    // display
+    void display()
+    {
+        int temp = front;
+        for (int i = 0; i < size ; i++) {
+            System.out.print(queue[temp]+" ");
+            temp = (temp+1)%cap;
         }
     }
+
 }
