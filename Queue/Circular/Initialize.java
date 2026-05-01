@@ -1,4 +1,4 @@
-package If_Else.Queue;
+package If_Else.Queue.Circular;
 /*
 queue is nothing but an array with different rules
 the rules are opposite to stack
