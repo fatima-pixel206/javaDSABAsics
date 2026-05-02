@@ -1,4 +1,4 @@
-package If_Else.Queue;
+package If_Else.Queue.Leanir;
 
 public class LinearQueueUsingAllIndexesTest {
     static void main() {
