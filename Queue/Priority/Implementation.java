@@ -55,13 +55,13 @@ public class Implementation {
             return -1;
         }
         if(size == 1)return values[size--];
-        // find high priority
+        /// find high priority
         int hp = 0;
         for (int i = 0; i < size ; i++) {
             if(priority[i] > priority[hp])
                 hp = i;
         }
-        // save dta
+        // /save dta
         int save = values[hp];
         // shift
         for (int i = hp; i < size -1 ; i++) {
@@ -69,12 +69,12 @@ public class Implementation {
             values[i] = values[i+1];
             priority[i] = priority[i+1];
         }
-        // this will move size -1
+        /// this will move size -1
 
         size--;
         return save;
     }
-    // display
+    /// display
     void display(){
         if(isEmpty()) return;
         // make copies
@@ -105,7 +105,7 @@ public class Implementation {
             System.out.println(" value "+ copy_value[i]+ " priority "+ copy_pri[i]);
         }
     }
-        // peak
+        /// peak
     int peak(){
         if(isEmpty()) return -1;
         int h = 0;
