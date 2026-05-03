@@ -6,7 +6,6 @@ public class PrintReverseArrayUsingRec {
         if(i == a.length-1) return;
       i++;
         rec(a,i);
-
         System.out.print(a[i]+" ");
 
     }
