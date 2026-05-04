@@ -8,5 +8,6 @@ public class TRYClass {
         if(n== 10) return;
         System.out.println("hi"+n);
         all(n+1);
+      System.out.println(n+1);
     }
 }
