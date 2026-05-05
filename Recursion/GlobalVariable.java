@@ -17,6 +17,7 @@ public class GlobalVariable {
     }
 
     int x =90;
-    
+    //x=90
+    // it is not possible in class
 
 }
