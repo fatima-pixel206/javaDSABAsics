@@ -1,7 +1,7 @@
 package If_Else.Recursion;
 
 public class GlobalVariable {
-    int x =10;
+    //int x =10;
     void change(){
         x= 30;
     }
@@ -15,4 +15,8 @@ public class GlobalVariable {
     void extra(){
         System.out.println(x);// shared
     }
+
+    int x =90;
+    
+
 }
