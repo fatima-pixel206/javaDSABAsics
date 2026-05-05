@@ -1,4 +1,6 @@
-package If_Else;
+package If_Else.Recursion;
+
+import java.util.Scanner;
 
 public class Print1_T0_N {
 
@@ -9,6 +11,8 @@ public class Print1_T0_N {
      }
 
      void main() {
-        printseq(1,8);
+         Scanner sc = new Scanner(System.in);
+         int n=  sc.nextInt();
+        printseq(1,n);
     }
 }
