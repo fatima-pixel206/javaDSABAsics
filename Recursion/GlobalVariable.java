@@ -6,6 +6,7 @@ public class GlobalVariable {
         x= 30;
     }
      void main() {
+        fun();
             extra();
          System.out.println(x);
          change();
@@ -15,8 +16,11 @@ public class GlobalVariable {
     void extra(){
         System.out.println(x);// shared
     }
-
-    int x =90;
+      void  fun(){
+        int x =90;
+          System.out.println(x);
+        }
+    static int x =910;
     //x=90
     // it is not possible in class
 
