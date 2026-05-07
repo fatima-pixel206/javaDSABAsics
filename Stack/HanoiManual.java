@@ -15,10 +15,13 @@ package If_Else.Stack;
             }
 
             // Asli Function Call
-            solve(n, A, C, B, 'A', 'C', 'B');
+            solve(n, A, B,C ,'A', 'C', 'B');
+            for (int i = 0; i < C.get ; i++) {
+
+            }
         }
 
-        public static void solve(int n, MyStack src, MyStack dest, MyStack help, char sName, char dName, char hName) {
+        public static void solve(int n, MyStack src, MyStack help, MyStack dest, char sName, char dName, char hName) {
             if (n == 0) return;
 
             // 1. n-1 disks ko helper pe bhejo
