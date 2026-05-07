@@ -30,28 +30,43 @@ public class StackWithArray {
         }
      }
         // pop method
-    void pop(){
-        if(isEmpty()){
+    void pop() {
+        if (isEmpty()) {
             System.out.println("Stack Underflow!");
 
-        }
-        else{
-            int data=arr[top--];
+        } else {
+            int data = arr[top--];
 
         }
     }
+        // void display
+        void display(){
+            if(isEmpty()) {
+                System.out.println("[]");
+                return;
+            }
+            System.out.print("[");
+            for (int i = 0; i <= top; i++) {
+                System.out.print(arr[i]+", ");
+            }
+            System.out.print("]");
+        }
+
 
     static void main() {
         StackWithArray st = new StackWithArray();
+            st.display();
+       // st.pop();
+        System.out.println(st.size);
+        System.out.println(st.isEmpty());
+        System.out.println(st.peak());
         st.push(3);
         st.push(4);
         st.push(5);
         st.push(6);
         st.push(7);
-        st.pop();
-        System.out.println(st.size);
-        System.out.println(st.isEmpty());
-        System.out.println(st.peak());
+
+        st.display();
     }
     }
 

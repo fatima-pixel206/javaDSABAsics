@@ -8,7 +8,7 @@ package If_Else.Stack;
         static MyStack C = new MyStack();
 
         public static void main(String[] args) {
-            int n = 3;
+            int n = 4;
             // Tower A mein disks bharna (3, 2, 1)
             for (int i = n; i >= 1; i--) {
                 A.push(i);
