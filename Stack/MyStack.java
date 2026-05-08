@@ -26,4 +26,8 @@ class MyStack {
     public int getSize() {
         return size;
     }
+    int peak(){
+        if(top==-1)return top;
+        return arr[top];
+    }
 }
