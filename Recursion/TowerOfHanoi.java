@@ -1,4 +1,4 @@
-package If_Else.Stack;
+package If_Else.Recursion;
 
     import java.util.Stack;
 import java.util.Scanner;

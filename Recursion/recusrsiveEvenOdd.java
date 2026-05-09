@@ -1,5 +1,6 @@
 package If_Else.Recursion;
-
+// this is not about print even odd number by checking this is simply print number a sequunce
+// also understand it as printing even od in seqeunce
 public class recusrsiveEvenOdd {
     int n=1;
       void odd(int n){
