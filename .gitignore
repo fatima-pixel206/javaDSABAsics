@@ -4,4 +4,6 @@ idea /
 *.xml
 .idea/
 package-info.java
-
+Stack/ExpressionConversionsAndEvalutions /
+*.class
+.idea /

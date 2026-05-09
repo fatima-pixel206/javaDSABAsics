@@ -3,8 +3,8 @@ package If_Else.Stack;
 public class StackWithArray {
 
         int size= 6;
-        int []arr= new int[size];
-        int top =-1;
+        int []arr = new int[size];
+        int top = -1;
         //check the stack is empty or not
     boolean isEmpty()
     {
