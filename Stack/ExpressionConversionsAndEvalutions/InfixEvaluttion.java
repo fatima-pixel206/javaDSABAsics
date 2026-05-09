@@ -27,12 +27,12 @@ public class InfixEvaluttion {
     public static void main(String[] args) {
         // infix evalution
         // make two empty stacks
-        String str = "9-5-3+3*4/6";
+        String str = "9+4-1*6/4-1";
         CharStack op = new CharStack(str);
 
         StackInterger inte = new StackInterger(str.length());
-        System.out.println(op.peak());
-        System.out.println(op.cap);
+        //System.out.println(op.peak());
+        //System.out.println(op.cap);
         for (int i = 0; i < str.length(); i++) {
             // save single char
             char c = str.charAt(i);
@@ -62,7 +62,7 @@ public class InfixEvaluttion {
                    op.pop();// delete current op
                    op.push(c);// ad next op
                }
-               if(priority(c)==2){
+             else   if(priority(c)==2){
                    if(priority(op.peak())== priority(c)){
                        // work
                        int v2 = inte.pop();
@@ -93,5 +93,6 @@ public class InfixEvaluttion {
 
         }
         System.out.println(inte.peak());
+
     }
 }
