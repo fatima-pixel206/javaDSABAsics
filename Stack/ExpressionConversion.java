@@ -74,7 +74,7 @@ public class ExpressionConversion {
 
     static void main() {
         ExpressionConversion check = new ExpressionConversion();
-        System.out.println(check.conversion("((a+b)*(e-f)/d)"));
+        System.out.println(check.conversion("a+b)*e-f)/d)"));
      //   System.out.println(check.revers("(a+b)*(e-f)/d"));
        // System.out.println(check.infixToPreFix("a+b"));
 //        CharStack s = new CharStack("(a+b)*d");

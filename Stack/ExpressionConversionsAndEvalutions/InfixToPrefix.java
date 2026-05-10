@@ -3,9 +3,10 @@ package If_Else.Stack.ExpressionConversionsAndEvalutions;
 import java.util.Stack;
 
 public class InfixToPrefix {
-    static void main() {
+     String infixtopre(String ex) {
+
         Stack<String> pre = new Stack<>();
-        String infix = "9-(5+3)*4/6";
+        String infix = ex;
         System.out.println("infix: "+infix);
        // System.out.println(pre);
         CharStack op = new CharStack(infix.length());
@@ -22,11 +23,13 @@ public class InfixToPrefix {
             }
             else if (ch==')') {
                 while(op.peak()!='('){
+                    if(op.size==1 && op.peak()!='(')
+                        return "invalid expresion";
                     String v2 = pre.pop();
                     String v1 = pre.pop();
                     char ops = op.pop();
                     String work =ops+v1+v2;
-                    pre.push(work);
+                    pre.push('('+work+')');
                 }
                 op.pop();// remove '('
             } // esle if end
@@ -65,6 +68,10 @@ public class InfixToPrefix {
         String prefix = pre.pop();
         System.out.println("prefix: "+prefix);
         
-
+return prefix;
     }//end main
+
+     void main() {
+         System.out.println(infixtopre("a+b)/a-b"));
+    }
 }
