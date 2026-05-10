@@ -3,12 +3,13 @@ package If_Else.Stack.ExpressionConversionsAndEvalutions;
 public class InfixBracketEvalution {
     static void main() {
 
-        String st = "2+9-(7*6)+9/8";
+        String st = "9+(4-9)/4-1";
         StackInterger val = new StackInterger(st.length());
         CharStack op = new CharStack(st);
         for (int i = 0; i < st.length(); i++) {
             char ch = st.charAt(i);
             int asci = (int)ch;
+
             if(asci>=48 && asci <=57){
                 val.push(asci-48);
             } else if (op.size==0 || ch=='('|| op.peak() =='(') {
@@ -67,5 +68,7 @@ public class InfixBracketEvalution {
             op.pop();
         }
         System.out.println(val.peak());
+        System.out.println((2+9-(7*6)+9/8)*2);
+        System.out.println(9+(4-9)/4-1);
     }
 }
