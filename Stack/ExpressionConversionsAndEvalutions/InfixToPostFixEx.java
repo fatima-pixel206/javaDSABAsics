@@ -3,8 +3,8 @@ package If_Else.Stack.ExpressionConversionsAndEvalutions;
 import java.util.Stack;
 
 public class InfixToPostFixEx {
-    static void main() {
-        String infix = "9-(5+3)*4/6";
+     String infixtopostfix(String ex) {
+        String infix = ex;
         CharStack ops = new CharStack(infix.length());
         Stack<String> post = new Stack<>();
         System.out.println("Infix: "+infix);
@@ -19,6 +19,9 @@ public class InfixToPostFixEx {
                 ops.push(ch);
             } else if (ch==')') {
                 while(ops.peak()!='('){
+                    if(ops.size==1 && ops.peak()!='(') {
+                       return "invalid expression";
+                    }
                     String v2 = post.pop();
                     String v1 = post.pop();
                     char op = ops.pop();
@@ -61,5 +64,10 @@ public class InfixToPostFixEx {
         }
         String postfix = post.pop();
         System.out.println("postfix: "+postfix);
+        return postfix;
+    }
+
+     void main() {
+        System.out.println( infixtopostfix("(5+2)*5/4"));
     }
 }
