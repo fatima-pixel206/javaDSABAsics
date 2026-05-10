@@ -64,6 +64,7 @@ public class InfixToPrefix {
         }
         String prefix = pre.pop();
         System.out.println("prefix: "+prefix);
+        
 
     }//end main
 }
