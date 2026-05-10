@@ -5,8 +5,8 @@ public class CharStack {
     int top;
     char []stack;
     int cap;
-    public CharStack(String str){
-        this.cap= str.length();
+    public CharStack(int cap){
+        this.cap= cap;
         this.stack= new char[cap];
         this.top=-1;
     }
@@ -53,13 +53,7 @@ public class CharStack {
         return save;
     }
 
-    static void main() {
-        CharStack st = new CharStack("fatima");
-        System.out.println(st.cap);
-        System.out.println(st.getSize());
-        st.push('j');
-        System.out.println(st.peak());
-    }
+
 }
 
 

@@ -28,7 +28,7 @@ public class InfixEvaluttion {
         // infix evalution
         // make two empty stacks
         String str = "9+4-9/4-1";
-        CharStack op = new CharStack(str);
+        CharStack op = new CharStack(str.length());
 
         StackInterger inte = new StackInterger(str.length());
         //System.out.println(op.peak());

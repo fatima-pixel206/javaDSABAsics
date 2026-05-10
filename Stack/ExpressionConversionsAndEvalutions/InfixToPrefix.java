@@ -8,7 +8,7 @@ public class InfixToPrefix {
         String infix = "9-(5+3)*4/6";
         System.out.println("infix: "+infix);
        // System.out.println(pre);
-        CharStack op = new CharStack("9+(4-9)/4-1");
+        CharStack op = new CharStack(infix.length());
          for(int i = 0; i  <infix.length(); i++){
              char ch = infix.charAt(i);
              int asci = (int)ch;

@@ -5,7 +5,7 @@ public class InfixBracketEvalution {
 
         String st = "9+(4-9)/4-1";
         StackInterger val = new StackInterger(st.length());
-        CharStack op = new CharStack(st);
+        CharStack op = new CharStack(st.length());
         for (int i = 0; i < st.length(); i++) {
             char ch = st.charAt(i);
             int asci = (int)ch;
