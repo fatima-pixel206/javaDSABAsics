@@ -72,6 +72,6 @@ return prefix;
     }//end main
 
      void main() {
-         System.out.println(infixtopre("a+b)/a-b"));
+         System.out.println(infixtopre("9-8*2/2"));
     }
 }

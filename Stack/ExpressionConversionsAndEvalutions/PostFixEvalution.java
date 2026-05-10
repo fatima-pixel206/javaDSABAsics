@@ -34,9 +34,16 @@ public class PostFixEvalution {
 
      void main() {
          System.out.println(postfixEvalutton("8-"));
-        int a ='9'-'0';
+        int a ='9'-'0';// this is implicit type casting and the answer will 9
+         int b ='9'; // this is also implicit casting but b will be 57
          System.out.println(a+7);
+         int x= 65;
+         char c =(char)a;
+         System.out.println(c+",");
          System.out.println((8+9)*5-5);
+         String aa= "fatima";
+         System.out.println(aa.length());
+         System.out.println(aa.charAt(6));
          System.out.println(('5'-'0')+6);
     }
 }
