@@ -34,13 +34,10 @@ public class NumberOfOcc {
                         //end if
                     } //end y loop
                 } //end x loop
-
-
                 if (occ > 1)// this is visitArray == true
                 {
 //
 //                }
-
                     System.out.println(ar[i][j] + " " + occ + " times");
                 }
 

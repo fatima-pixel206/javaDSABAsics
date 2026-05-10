@@ -62,12 +62,14 @@ public class InfixToPostFixEx {
             String finalWork = v1+v2+op;
             post.push(finalWork);
         }
+         System.out.println(ops.size);
+         System.out.println(post.size());
         String postfix = post.pop();
         System.out.println("postfix: "+postfix);
         return postfix;
     }
 
      void main() {
-        System.out.println( infixtopostfix("(5+2)*5/4"));
+        System.out.println( infixtopostfix("(8+9)*5-5"));
     }
 }

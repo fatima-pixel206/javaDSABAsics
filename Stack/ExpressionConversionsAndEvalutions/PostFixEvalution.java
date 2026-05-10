@@ -5,70 +5,38 @@ import java.util.Stack;
 public class PostFixEvalution {
 
 
-    void postfixEvalutton(String stinfix){
-        InfixToPostFixEx post = new InfixToPostFixEx();
-        String ps =  post.infixtopostfix(stinfix);
-        if(ps.equalsIgnoreCase("invalid expression")) {
-            System.out.println("invalid expression");
-            return;
-        }
-        String pst = ps;
-        CharStack op = new CharStack(pst.length());
+    String postfixEvalutton(String stinfix) {
+        String pst = stinfix;
         StackInterger val = new StackInterger(pst.length());
-        for (int i = 0; i <ps.length() ; i++) {
+        for (int i = 0; i < pst.length(); i++) {
             char ch = pst.charAt(i);
-             int asci =(int)ch;
-            if(asci >=48 && asci <= 57 || Character.isLetterOrDigit(ch)){
-                val.push(asci-48);
+            if (Character.isDigit(ch)) {
+                val.push(ch-'0');
             }
-            else if (op.getSize() == 0 ) {
-                op.push(ch);
+                else{
+                    if(val.getSize()<2) return "Invalid expression";
+                    int num2 =val.pop();
+                    int num1 = val.pop();
+                    if(InfixEvaluttion.priority(ch)==1){
+                        if(ch=='+')val.push(num1+num2);
+                        if(ch=='-')val.push(num1-num2);
+                    }
+                    else  {
+                        if(ch=='*')val.push(num1*num2);
+                        if(ch=='/')val.push(num1/num2);
+                    }
             }
-
-
-     else {
-         if(InfixEvaluttion.priority(ch) == 1){
-             int v2 = val.pop();
-             int v1 = val.pop();
-             if(op.peak()=='-') val.push(v1-v2);
-             if(op.peak()=='+') val.push(v1+v2);
-             if(op.peak()=='/') val.push(v1/v2);
-             if(op.peak()=='*') val.push(v1*v2);
-             op.pop();
-             op.push(ch);
-         }
-         else if(InfixEvaluttion.priority(ch)==2){
-             if(InfixEvaluttion.priority(ch)==InfixEvaluttion.priority(op.peak())){
-                 int v2 = val.pop();
-                 int v1 = val.pop();
-                 if(op.peak()=='/') val.push(v1/v2);
-                 if(op.peak()=='*') val.push(v1*v2);
-                 op.pop();
-                 op.push(ch);
-             }
-         }
-         else {
-             op.push(ch);
-         }
-            }
-        }// end for
-        while(val.getSize()!=1){
-            int v2 = val.pop();
-            int v1 = val.pop();
-            if(op.peak()=='/') val.push(v1/v2);
-            if(op.peak()=='*') val.push(v1*v2);
-            if(op.peak()=='-') val.push(v1-v2);
-            if(op.peak()=='+') val.push(v1+v2);
-            op.pop();
         }
-       // op.pop();
-        //System.out.println(op.peak());
-        int postfixEva = val.pop();
-        System.out.println("Post fix evalute "+postfixEva);
+        String convert = ""+val.pop();
+        System.out.println("postfix evalution :"+convert);
+        return convert;
     }
 
      void main() {
-         postfixEvalutton("(5+3)*6/4");
-         System.out.println((5+3)*6/4);
+         System.out.println(postfixEvalutton("8-"));
+        int a ='9'-'0';
+         System.out.println(a+7);
+         System.out.println((8+9)*5-5);
+         System.out.println(('5'-'0')+6);
     }
 }
