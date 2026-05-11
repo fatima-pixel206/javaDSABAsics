@@ -13,26 +13,22 @@ public class PrefixEvalution {
                 int num1 = val.pop();
                 int num2 = val.pop();
 
-                if (InfixEvaluttion.priority(ch) == 1) {
                     if (ch == '+') val.push(num1 + num2);
                     if (ch== '-') val.push(num1 - num2);
-
-
-                } else {
                         if (ch == '/') val.push(num1 / num2);
                         if (ch == '*') val.push(num1 * num2);
 
                     }
                 }
 
-        }// end for
+        // end for
 
         String prefixed = ""+val.pop();
         return prefixed;
     }
 
      void main() {
-        System.out.println(prefixEva("-63"));
+        System.out.println(prefixEva("-62"));
          System.out.println(9-8);
          System.out.println((9-8)*2/2);
     }

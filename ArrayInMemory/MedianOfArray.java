@@ -20,7 +20,7 @@ import java.util.Arrays;
 
         }
         public static void main(String[] args) {
-            findMedian(new int[]{9,1,2,3,4,5,5});
+            findMedian(new int[]{9,1,2,3,4,5,5,3});
 
         }
     }
