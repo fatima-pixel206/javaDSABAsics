@@ -12,26 +12,28 @@ public class PaperTest {
         test.push(5);
         test.push(4);
         test.push(2);
-
+         System.out.println(test.peak());
        test.display();
+         System.out.println();
+       System.out.println(test.getSize());
+         System.out.println(test.peak());
 //        System.out.println();
-       test.reverse();
-        System.out.println();
-        //revRecursive(test);
+      // test.reverse();
+//         test.reversrec();
+
+
        //  test.copy();
-        test.display();
-        test.pop();
-        test.display();
-        test.push(10);
-        test.display();
+
+        test.reverse();
+         test.display();
+         System.out.println(test.getSize());
+         System.out.println(test.peak()+",");
+//        test.pop();
+//        test.display();
+//        test.push(10);
+//        test.display();
 
     }
-    public void revRecursive(PaperPrepStack test){
-    if(test.isEmpty()) return;
-
-        int temp = test.pop();
-        revRecursive(test);
-      test.push(temp);
 
     }
-}
+

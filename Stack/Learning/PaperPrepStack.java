@@ -91,5 +91,20 @@ public class PaperPrepStack {
             j--;
         }
 
+    }// revusivley revers
+    void reversrec(){
+        if(isEmpty())return;
+        int temp = pop();
+        reversrec();
+
+        insetBottom(temp);
+    }// helper
+    void insetBottom(int data){
+        if(isEmpty() ) {push(data); return;}
+        int temp = pop();
+        insetBottom(data);
+        push(temp);
+
+
     }
 }
