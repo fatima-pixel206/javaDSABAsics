@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class PreFixToPostFixExpression {
     static void main() {
-        String pre ="/*-9822";
+        String pre ="-9/*+5346";
         Stack<String> post = new Stack<>();
         for (int i = pre.length()-1; i >=0 ; i--) {
             char  ch = pre.charAt(i);
