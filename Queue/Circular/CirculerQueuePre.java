@@ -82,8 +82,8 @@ public class CirculerQueuePre {
     // display() fifo
     void display(){
         for (int i = 0; i < size ; i++) {
-            System.out.print(ar[front]ی
-            front= (front+1)٪cap؛
-        }ی
+            System.out.print(ar[front]+" ");
+            front= (front+1)%cap;
+        }
     }
 }
