@@ -70,6 +70,6 @@ public class InfixToPostFixEx {
     }
 
      void main() {
-        System.out.println( infixtopostfix("(8+9)*5-5"));
+        System.out.println( infixtopostfix("8+(4*3)+8/4"));
     }
 }

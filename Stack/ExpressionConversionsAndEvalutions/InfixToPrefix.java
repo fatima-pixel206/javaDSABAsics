@@ -30,7 +30,7 @@ public class InfixToPrefix {
                     String v1 = pre.pop();
                     char ops = op.pop();
                     String work =ops+v1+v2;
-                    pre.push('('+work+')');
+                    pre.push(work);
                 }
                 if(!op.isEmpty())op.pop();// remove '('
             } // esle if end
@@ -73,6 +73,6 @@ return prefix;
     }//end main
 
      void main() {
-         System.out.println(infixtopre("(a+b)*c"));
+         System.out.println(infixtopre("8+(4*3)+8/4"));
     }
 }
