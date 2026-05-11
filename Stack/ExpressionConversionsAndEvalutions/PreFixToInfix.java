@@ -16,7 +16,7 @@ public class PreFixToInfix {
                 if(val.size()<2)return;
                 String v1 = val.pop();
                  String v2 = val.pop();
-                 String work = v1+ch+v2;
+                 String work = '('+v1+ch+v2+')';
                 val.push(work);
             }
         }

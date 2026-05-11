@@ -1,8 +1,8 @@
 package If_Else.Queue.DE_Queue;
 
 public class DE_Queue {
-    int cap =8;
-    int front =-1;
+    private int cap =8;
+    private int front =-1;
     int rear =-1;
     int size =   0;
     int [] deque = new int[cap];

@@ -18,8 +18,8 @@ public class PaperPrepStack {
         return size == cap;
     }
    public boolean isEmpty(){
-
-        return size == 0;
+if(top==-1) return true;
+else return false;
     }
     // is push
     void push (int data){
@@ -106,5 +106,9 @@ public class PaperPrepStack {
         push(temp);
 
 
+    }
+    void clear(){
+        top =-1;
+        System.out.println(" stack cleared");
     }
 }

@@ -28,6 +28,8 @@ public class PaperTest {
          test.display();
          System.out.println(test.getSize());
          System.out.println(test.peak()+",");
+         test.clear();
+         test.pop();
 //        test.pop();
 //        test.display();
 //        test.push(10);
