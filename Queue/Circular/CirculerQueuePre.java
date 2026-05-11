@@ -59,15 +59,13 @@ public class CirculerQueuePre {
             System.out.println(" queue is empty......");
             return -1;
         }
-        int store =0;
+        int store = ar[front];
      if(size==1){
-         store = ar[front];
+
             rear = -1;
             front = -1;
-
         }
         else {
-            store = front;
             front = (front+1)%cap;
         }
         size--;
@@ -81,9 +79,39 @@ public class CirculerQueuePre {
     }
     // display() fifo
     void display(){
-        for (int i = 0; i < size ; i++) {
-            System.out.print(ar[front]+" ");
-            front= (front+1)%cap;
+        if(isEmpty()){
+            System.out.println(" null..");
+            return;
         }
+        for (int i = front; i <= rear ; i++) {
+            System.out.print(ar[i]+" ");
+        }
+    }
+    /* reverse*/
+    void reverse() {
+        if (isEmpty()) {
+            System.out.println(" empty.");
+            return;
+
+        } else if (size == 1) {
+            System.out.println("only one element");
+            return;
+        } else {
+            int i = front;
+            int j = rear;
+            while (i < j) {
+                int rev = ar[i];
+                ar[i] = ar[j];
+                ar[j] = rev;
+                i++;
+                j--;
+            }
+        }
+    }
+    int getFront(){
+        return this.front;
+    }
+    int getRear(){
+        return this.rear;
     }
 }

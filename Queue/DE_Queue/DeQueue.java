@@ -150,7 +150,6 @@ public class DeQueue {
             System.out.println("❌ DeQueue is Empty!");
             return;
         }
-
         System.out.print("DeQueue Elements: [");
         for (int i = front; i <= rear; i++) {
             System.out.print(arr[i]);
