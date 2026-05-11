@@ -3,17 +3,18 @@ package If_Else.Stack.ExpressionConversionsAndEvalutions;
 import java.util.Stack;
 
 public class InfixToPrefix {
-     String infixtopre(String ex) {
+     String infixtopre(String ex)
+     {
 
         Stack<String> pre = new Stack<>();
         String infix = ex;
         System.out.println("infix: "+infix);
        // System.out.println(pre);
         CharStack op = new CharStack(infix.length());
-         for(int i = 0; i  <infix.length(); i++){
+         for(int i = 0; i  < infix.length(); i++){
              char ch = infix.charAt(i);
-             int asci = (int)ch;
-            if(asci >= 48 && asci <= 57 || Character.isLetterOrDigit(ch)){
+
+            if( Character.isLetterOrDigit(ch)){
                 String type = ""+ch;// converting char into string of char is 0 to 9
                 pre.push(type);
 
@@ -22,7 +23,7 @@ public class InfixToPrefix {
                 op.push(ch);
             }
             else if (ch==')') {
-                while(op.peak()!='('){
+                while( !op.isEmpty() && op.peak()!='('){
                     if(op.size==1 && op.peak()!='(')
                         return "invalid expresion";
                     String v2 = pre.pop();
@@ -31,7 +32,7 @@ public class InfixToPrefix {
                     String work =ops+v1+v2;
                     pre.push('('+work+')');
                 }
-                op.pop();// remove '('
+                if(!op.isEmpty())op.pop();// remove '('
             } // esle if end
              else {
                  if(InfixEvaluttion.priority(ch)==1){
@@ -72,6 +73,6 @@ return prefix;
     }//end main
 
      void main() {
-         System.out.println(infixtopre("9-8*2/2"));
+         System.out.println(infixtopre("(a+b)*c"));
     }
 }
