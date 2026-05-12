@@ -34,14 +34,18 @@ public class DoubleEndedQueeu {
         {
             System.out.println(" ful...");
             return;
-        } else if (front==-1) {
+        }
+        else if (front==-1) {
             front =0;
             rear = 0;
+
+
         }
         else {
             rear = (rear+1)%cap;
+
         }
-        qu[rear]=data;
+        qu[rear] = data;
         size++;
     }
     // add at front
@@ -49,22 +53,27 @@ public class DoubleEndedQueeu {
         if(isFull()){
             System.out.println(" fulll");
             return;
-        } else if (isEmpty()) {
+        }
+        if (front == -1) {
             rear =0;
             front =0;
+            qu[front] =f;
         }
         // shift
         else if(front == 0){
             for (int i = rear; i >= front ; i--) {
-                qu[i] = qu[i+1];
+                qu[i+1] = qu[i];
             }
+            qu[front] = f;
+            rear++;
 
         }
         else {
             front = (front-1+cap)%cap;
+            qu[front]= f;
         }
-        qu[front]= f;
-        rear++;
+
+
         size++;
     }
     // delete at front
@@ -74,13 +83,13 @@ public class DoubleEndedQueeu {
             return -1;
         }
         int save = qu[front];
-         if (size ==1) {
+         if (front== rear) {
             rear =-1;
             front=-1;
 
         }
          else {
-             rear = (rear+1)%cap;
+             front = (front+1)%cap;
          }
          size--;
          return save;
@@ -92,7 +101,7 @@ public class DoubleEndedQueeu {
 
         }
         int save = qu[rear];
-        if(size ==1){
+        if(front== rear){
             rear =-1;
             front =-1;
 
@@ -109,7 +118,7 @@ public class DoubleEndedQueeu {
             System.out.println(" nul///");
             return;
         }
-        for (int i = front; i < rear; i++) {
+        for (int i = front; i < size; i++) {
             System.out.print(qu[i]+" ");
         }
     }
@@ -120,7 +129,7 @@ public class DoubleEndedQueeu {
             return;
         }
         for (int i = rear; i >=front ; i--) {
-            System.out.println(qu[i]);
+            System.out.print(qu[i]+" ");
         }
     }
     // clear
@@ -129,5 +138,12 @@ public class DoubleEndedQueeu {
         rear =-1;
         size=0;
     }
-
+    int peakofFront(){
+        if(isEmpty()) return -1;
+        else return qu[front];
+    }
+int peakofrear(){
+        if(isEmpty())return rear;
+        else return qu[rear];
+}
 }
