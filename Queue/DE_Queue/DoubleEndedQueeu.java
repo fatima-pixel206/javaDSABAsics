@@ -68,6 +68,8 @@ public class DoubleEndedQueeu {
             rear++;
 
         }
+
+
         else {
             front = (front-1+cap)%cap;
             qu[front]= f;

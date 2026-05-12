@@ -1,4 +1,4 @@
-package If_Else;
+package If_Else.Recursion;
 
 public class Factorial {
     static int fact(int n){
